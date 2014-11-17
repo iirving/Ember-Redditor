@@ -1,0 +1,12 @@
+<h3>current listings for {{this.model.[0].name}}</h3>
+
+{{#each this}}
+
+   <li>
+    <a {{bind-attr href=url}}>{{title}}</a> ({{domain}})
+  </li>
+
+
+{{/each}}
+
+

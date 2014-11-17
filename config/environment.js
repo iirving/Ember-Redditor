@@ -16,8 +16,28 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
-  };
+    },
+
+    // COMMENT THIS OUT TO SEE THE VIOLATIONS
+          contentSecurityPolicy: {
+       //     'default-src': "'self'",  // normal 'none'
+       //     'script-src': "'self' 'unsafe-eval' liveReloadPort",
+       //     'script-src': "'self' 'unsafe-eval' *",
+       //  //   'font-src': "'self' fonts.gstatic.com",
+       // // 'connect-src': "'self',
+        'connect-src': "'self' http://www.reddit.com liveReloadPort",
+       //  //   'connect-src': "'unsafe-eval' http://www.reddit.com",
+       //     'connect-src': "'unsafe-eval' *",
+       //     'connect-src': "'safe' http://www.reddit.com",
+       //     'connect-src': "'safe' *",
+       //   //  "connect-src 'self' reddit.com"
+       //    'img-src': "'self'",
+            'style-src': "'self' 'unsafe-inline'"// fonts.googleapis.com",
+       //     'media-src': "'self'"
+       //  //   'frame-src': "'self' www.youtube.com"
+          }
+
+};
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
