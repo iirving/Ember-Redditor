@@ -4,7 +4,6 @@ import ajax from 'ic-ajax';
 export default Ember.Object.extend({
   find: function(name, id) {
     //subreddit
-    // aww
     var url = "http://www.reddit.com/r/"+id+".json";
 
     // the jquery way
