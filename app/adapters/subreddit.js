@@ -3,7 +3,8 @@ import ajax from 'ic-ajax';
 
 export default Ember.Object.extend({
   find: function(name, id) {
-    //subreddit
+    //name is the source like 'subreddit'
+    // id is used here as the subreddit like 'aww' or 'ruby'
     var url = "http://www.reddit.com/r/"+id+".json";
 
     // the jquery way
