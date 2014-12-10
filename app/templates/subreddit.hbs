@@ -1,12 +1,14 @@
-<h3>current listings for {{this.model.[0].name}}</h3>
+<h3 class="subredit-heading">current listings for {{this.model.[0].name}}</h3>
 
+<ul class="subredit-results">
 {{#each this}}
 
-   <li>
+   <li class="subredit-items">
     <a {{bind-attr href=url}}>{{title}}</a> ({{domain}})
   </li>
 
 
 {{/each}}
+</ul>
 
 
