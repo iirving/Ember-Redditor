@@ -8,10 +8,9 @@
      App = startApp();
    },
    teardown: function() {
-     Ember.run(App, App.destroy);
+ 	  Ember.run(App, App.destroy);
 	 }
  });
-
 
 test('go to a subreddit and make sure the title is right',function(){
 	var subreddit_test = "aww";
